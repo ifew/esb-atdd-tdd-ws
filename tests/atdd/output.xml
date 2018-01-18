@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generated="20180118 15:44:13.287" generator="Robot 3.0.2 (Python 2.7.10 on darwin)">
+<suite source="/Users/ifew/www_customer/easybuy/workshop/esb-atdd-tdd-ws/tests/atdd/register.robot" id="s1" name="Register">
+<test id="s1-t1" name="การลงทะเบียนใช้ umayplus+ ได้สำเร็จ Odterm เท่ากับ 0">
+<kw name="กรอกข้อมูลลูกค้า">
+<arguments>
+<arg>6273885053341539</arg>
+<arg>3100505143401</arg>
+<arg>01/01/2530</arg>
+<arg>092224955</arg>
+</arguments>
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to given URL.</doc>
+<arguments>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20180118 15:44:13.473" level="INFO">Opening browser 'chrome' to base url 'http://localhost:5000'</msg>
+<status status="PASS" endtime="20180118 15:44:18.160" starttime="20180118 15:44:13.472"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>txt_CardNo</arg>
+<arg>${CardNo}</arg>
+</arguments>
+<msg timestamp="20180118 15:44:18.163" level="INFO">Typing text '6273885053341539' into text field 'txt_CardNo'</msg>
+<status status="PASS" endtime="20180118 15:44:18.337" starttime="20180118 15:44:18.161"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>txt_CardID</arg>
+<arg>${CardID}</arg>
+</arguments>
+<msg timestamp="20180118 15:44:18.338" level="INFO">Typing text '3100505143401' into text field 'txt_CardID'</msg>
+<status status="PASS" endtime="20180118 15:44:18.448" starttime="20180118 15:44:18.338"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>txt_BirthDate</arg>
+<arg>${Date_Day}</arg>
+</arguments>
+<msg timestamp="20180118 15:44:18.449" level="INFO">Typing text '01/01/2530' into text field 'txt_BirthDate'</msg>
+<status status="PASS" endtime="20180118 15:44:18.544" starttime="20180118 15:44:18.448"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>txt_MobileNo</arg>
+<arg>${MobileNo}</arg>
+</arguments>
+<msg timestamp="20180118 15:44:18.545" level="INFO">Typing text '092224955' into text field 'txt_MobileNo'</msg>
+<status status="PASS" endtime="20180118 15:44:18.650" starttime="20180118 15:44:18.545"></status>
+</kw>
+<kw name="Submit Form" library="Selenium2Library">
+<doc>Submits a form identified by `locator`.</doc>
+<msg timestamp="20180118 15:44:18.651" level="INFO">Submitting form 'None'.</msg>
+<status status="PASS" endtime="20180118 15:44:19.039" starttime="20180118 15:44:18.651"></status>
+</kw>
+<status status="PASS" endtime="20180118 15:44:19.039" starttime="20180118 15:44:13.472"></status>
+</kw>
+<kw name="แสดงข้อมูลลูกค้า">
+<arguments>
+<arg>6273885053341539</arg>
+<arg>3100505143401</arg>
+<arg>01/01/2530</arg>
+<arg>092224955</arg>
+</arguments>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<doc>Waits until `text` appears on current page.</doc>
+<arguments>
+<arg>${CardNo}</arg>
+</arguments>
+<status status="PASS" endtime="20180118 15:44:19.061" starttime="20180118 15:44:19.040"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<doc>Waits until `text` appears on current page.</doc>
+<arguments>
+<arg>${CardID}</arg>
+</arguments>
+<status status="PASS" endtime="20180118 15:44:19.078" starttime="20180118 15:44:19.062"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<doc>Waits until `text` appears on current page.</doc>
+<arguments>
+<arg>${Date_Day}</arg>
+</arguments>
+<status status="PASS" endtime="20180118 15:44:19.093" starttime="20180118 15:44:19.078"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<doc>Waits until `text` appears on current page.</doc>
+<arguments>
+<arg>${MobileNo}</arg>
+</arguments>
+<status status="PASS" endtime="20180118 15:44:19.107" starttime="20180118 15:44:19.093"></status>
+</kw>
+<kw name="Submit Form" library="Selenium2Library">
+<doc>Submits a form identified by `locator`.</doc>
+<msg timestamp="20180118 15:44:19.107" level="INFO">Submitting form 'None'.</msg>
+<status status="PASS" endtime="20180118 15:44:19.350" starttime="20180118 15:44:19.107"></status>
+</kw>
+<status status="PASS" endtime="20180118 15:44:19.350" starttime="20180118 15:44:19.039"></status>
+</kw>
+<kw name="แสดงข้อความ success">
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<doc>Waits until `text` appears on current page.</doc>
+<arguments>
+<arg>ขอบคุณค่ะ ท่านได้ลงทะเบียน Umayplus เรียบร้อยแล้วค่ะ</arg>
+</arguments>
+<status status="PASS" endtime="20180118 15:44:19.370" starttime="20180118 15:44:19.351"></status>
+</kw>
+<status status="PASS" endtime="20180118 15:44:19.370" starttime="20180118 15:44:19.350"></status>
+</kw>
+<kw type="teardown" name="Close Browser" library="Selenium2Library">
+<doc>Closes the current browser.</doc>
+<status status="PASS" endtime="20180118 15:44:19.445" starttime="20180118 15:44:19.371"></status>
+</kw>
+<status status="PASS" endtime="20180118 15:44:19.446" critical="yes" starttime="20180118 15:44:13.470"></status>
+</test>
+<status status="PASS" endtime="20180118 15:44:19.448" starttime="20180118 15:44:13.289"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="0" pass="1">Critical Tests</stat>
+<stat fail="0" pass="1">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat fail="0" id="s1" name="Register" pass="1">Register</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
