@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using api.Models;
 using api.Services;
 using Microsoft.AspNetCore.Mvc;
+using web.Models;
 
 namespace api.Controllers
 {
@@ -36,6 +37,23 @@ namespace api.Controllers
         public IEnumerable<Member> GetAll()
         {
             return _service.List_Members();
+        }
+
+        [HttpPost("register")]
+        public IActionResult Register([FromBody] RegisterModel postdata)
+        {
+            var data = new Member
+            {
+                Fullname = "Call from API",
+                Card_no = postdata.txt_CardNo,
+                Personal_id = postdata.txt_CardID,
+                Birthday = DateTime.Parse(postdata.txt_BirthDate),
+                Mobilephone = postdata.txt_MobileNo
+            };
+
+            var result = _service.Add_Members(data);
+
+            return new ObjectResult(result);
         }
     }
 }
