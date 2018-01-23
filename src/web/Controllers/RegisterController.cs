@@ -21,12 +21,6 @@ namespace web.Controllers
             ViewData["registerModel.txt_CardNo"] = registerModel.txt_CardNo;
             ViewData["registerModel.txt_CardID"] = registerModel.txt_CardID;
             ViewData["registerModel.txt_BirthDate"] = registerModel.txt_BirthDate;
-            ViewData["registerModel.txt_MobileNo"] = registerModel.txt_MobileNo;
-            return View();
-        }
-
-        public IActionResult Finish()
-        {
             return View();
         }
 

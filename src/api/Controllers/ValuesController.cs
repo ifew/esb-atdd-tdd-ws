@@ -4,11 +4,15 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 
-namespace umayplusapi.Controllers
+namespace api.Controllers
 {
     [Route("api/[controller]")]
     public class ValuesController : Controller
     {
+        public ValuesController()
+        {
+        }
+
         // GET api/values
         [HttpGet]
         public IEnumerable<string> Get()

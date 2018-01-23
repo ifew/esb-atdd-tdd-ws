@@ -8,11 +8,10 @@
         <h2>@ViewData["Title"]</h2>
         <div asp-validation-summary="All" class="text-danger"></div>
         <form asp-action="Confirmation" asp-controller="Register">
-            Card No: <input type="text" id="txt_CardNo" name="txt_CardNo" value=""><br/>
-            Personal ID: <input type="text" id="txt_CardID" name="txt_CardID" value=""><br/>
-            Birth Date: <input type="text" id="txt_BirthDate" name="txt_BirthDate" value=""><br/>
-            Mobile Phone: <input type="text" id="txt_MobileNo" name="txt_MobileNo" value=""><br/>
-            <input type="submit" value="Check Profile" name="check_profile" id="check_profile" />
+        <label for="txt_CardNo">Card No: <input type="text" id="txt_CardNo" name="txt_CardNo" value=""></label>
+        <label for="txt_CardID">Personal ID: <input type="text" id="txt_CardID" name="txt_CardID" value=""></label>
+        <label for="txt_BirthDate">Card No: <input type="text" id="txt_BirthDate" name="txt_BirthDate" value=""></label>
+        <input type="submit" value="Check Profile" name="check_profile" id="check_profile" />
         </form>
     </div>
 </div>

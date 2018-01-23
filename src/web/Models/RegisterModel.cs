@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.ComponentModel.DataAnnotations;
 
 namespace web.Models
@@ -18,5 +18,6 @@ namespace web.Models
         public string txt_BirthDate { get; set; }
 
         public string txt_MobileNo { get; set; }
+        public string lbl_ErrorMSG { get; set; }
     }
 }
