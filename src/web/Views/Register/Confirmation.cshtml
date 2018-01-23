@@ -1,6 +1,8 @@
-﻿@{
+﻿@model RegisterModel
+@{
     ViewData["Title"] = "Register Member";
     Layout = "_Layout_confirmation";
+    var registerModel = ViewData["RegisterModel"] as RegisterModel;
 }
 
 <div class="row">
@@ -8,9 +10,10 @@
         <h2>@ViewData["Title"]</h2>
         <div asp-validation-summary="All" class="text-danger"></div>
         <form asp-action="Confirmation" asp-controller="Register">
-        <label for="txt_CardNo">Card No: @ViewData["registerModel.txt_CardNo"]</label>
-        <label for="txt_CardID">Personal ID: @ViewData["registerModel.txt_CardID"]</label>
-        <label for="txt_BirthDate">Card No: @ViewData["registerModel.txt_BirthDate"]</label>
+        <label for="txt_CardNo">Card No: @registerModel.txt_CardNo</label>
+        <label for="txt_CardID">Personal ID: @registerModel.txt_CardID</label>
+        <label for="txt_MobileNo">Mobile Number: @registerModel.txt_MobileNo</label>
+        <label for="txt_BirthDate">Birth Date: @registerModel.txt_BirthDate</label>
         <input type="submit" value="Save" />
         </form>
     </div>
